@@ -488,7 +488,33 @@ annotate TravelService.Travel @(Common.SideEffects #ReactonItemCreationOrDeletio
     TargetProperties: ['TotalPrice']
 });
 
-annotate TravelService.Travel with {
+annotate TravelService.Passenger with  @(
+    UI: {
+        QuickViewFacets: [{
+            $Type   : 'UI.ReferenceFacet', 
+            Label   : 'Name',
+            Target  :'@Communication.Contact#contact'
+        }]
+    },    
+    Communication.Contact #contact : {
+        $Type   : 'Communication.ContactType',
+        fn      : FullName,
+        tel     : [
+            {
+                $Type   : 'Communication.PhoneNumberType',
+                type    : #work,
+                uri     : PhoneNumber,
+            },
+        ],
+        email : [
+            {
+                $Type   : 'Communication.EmailAddressType',
+                type    : #work,
+                address : EMailAddress,
+            },
+        ],        
+    }
+) {
     @(Common: {
         SemanticObject: 'Customer',
     })
