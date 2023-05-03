@@ -69,7 +69,7 @@ annotate TravelService.Travel with @UI: {
             ![@UI.Importance]: #High
         },
         {
-            Value            : to_Customer_CustomerID,
+            Value            : to_Customer.CustomerID,
             ![@UI.Importance]: #High
         },
         {Value: BeginDate},
@@ -97,19 +97,12 @@ annotate TravelService.Travel with @UI: {
             Target: 'to_Agency/@Communication.Contact#contact',
             Label : 'Agency',
         },
-         {
+        {
             $Type              : 'UI.DataFieldForIntentBasedNavigation',
             SemanticObject     : 'Customer',
             Action             : 'display',
             Label              : '{i18n>DisplayCustomers}',
             RequiresContext    : false,
-            Mapping : [
-                {
-                    $Type : 'Common.SemanticObjectMappingType',
-                    LocalProperty : to_Customer_CustomerID,
-                    SemanticObjectProperty : 'CustomerID',
-                }
-            ]
         }
     ],
     Facets                : [
