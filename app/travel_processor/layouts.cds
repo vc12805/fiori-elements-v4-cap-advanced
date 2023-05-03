@@ -487,3 +487,10 @@ annotate TravelService.Travel @(Common.SideEffects #ReactonItemCreationOrDeletio
     SourceEntities  : [to_Booking],
     TargetProperties: ['TotalPrice']
 });
+
+annotate TravelService.Travel with {
+    @(Common: {
+        SemanticObject: 'Customer',
+    })
+    to_Customer
+};
