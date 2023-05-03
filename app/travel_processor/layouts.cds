@@ -72,7 +72,7 @@ annotate TravelService.Travel with @UI: {
             $Type            : 'UI.DataFieldWithIntentBasedNavigation',
             Value            : to_Customer.CustomerID,
             SemanticObject   : 'Customer',
-            Action           : 'display',            
+            Action           : 'display',
             ![@UI.Importance]: #High
         },
         {Value: BeginDate},
