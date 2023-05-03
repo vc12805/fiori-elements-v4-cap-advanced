@@ -488,9 +488,9 @@ annotate TravelService.Travel @(Common.SideEffects #ReactonItemCreationOrDeletio
     TargetProperties: ['TotalPrice']
 });
 
-annotate TravelService.Travel with {
+annotate TravelService.Passenger with {
     @(Common: {
         SemanticObject: 'Customer',
     })
-    to_Customer
+    CustomerID
 };
