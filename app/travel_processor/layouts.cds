@@ -102,7 +102,7 @@ annotate TravelService.Travel with @UI: {
             SemanticObject     : 'Customer',
             Action             : 'display',
             Label              : '{i18n>DisplayCustomers}',
-            RequiresContext    : false
+            RequiresContext    : false,
         }
     ],
     Facets                : [
@@ -518,5 +518,5 @@ annotate TravelService.Passenger with  @(
     @(Common: {
         SemanticObject: 'Customer',
     })
-    to_Customer
+    CustomerID
 };
